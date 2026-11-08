@@ -3,8 +3,7 @@ name: Publish weather to Telegram
 on:
   workflow_dispatch:
   schedule:
-    - cron: "0 7,19 * * *"
-  timezone: "Europe/Moscow"
+    - cron: "0 4,16 * * *"
 jobs:
   publish:
     runs-on: ubuntu-latest
