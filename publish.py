@@ -62,7 +62,7 @@ def main():
         try:
             blocks.append(city_block(city))
         except Exception:
-            blocks.append(f"<b>{city['name']}</b>\\n⚠️ Временно не удалось получить прогноз.")
+            blocks.append(f"<b>{city['name']}</b>\n⚠️ Временно не удалось получить прогноз.")
     message = f"🌦 <b>ПОГОДА НА {today}</b>\n\n" + "\n\n────────────\n\n".join(blocks) + "\n\n<i>Источник: Open-Meteo</i>"
     response = requests.post(
         f"https://api.telegram.org/bot{BOT_TOKEN}/sendMessage",
