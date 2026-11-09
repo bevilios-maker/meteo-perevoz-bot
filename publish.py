@@ -47,12 +47,14 @@ def city_block(city):
     rain = d["precipitation_probability_max"][0]
     rain_text = f"{round(rain)}%" if rain is not None else "нет данных"
     return (
-        f"<b>{city['name']}</b>\n{emoji(code)}"
-        f"🌡 Сейчас: <b>{temp:+d}°C</b> (ощущается как {feels:+d}°C)\\n"
-        f"📈 За день: {low:+d}…{high:+d}°C\\n"
-        f"💨 Ветер: {round(c['wind_speed_10m'])} км/ч\\n"
-        f"💧 Влажность: {round(c['relative_humidity_2m'])}%\\n"
-        f"🌧 Вероятность осадков: {rain_text}"
+        return (
+    f"<b>{city['name']}</b>\n{emoji(code)}\n"
+    f"🌡 Сейчас: <b>{temp:+d}°C</b> (ощущается как {feels:+d}°C)\n"
+    f"📈 За день: {low:+d}…{high:+d}°C\n"
+    f"💨 Ветер: {round(c['wind_speed_10m'])} км/ч\n"
+    f"💧 Влажность: {round(c['relative_humidity_2m'])}%\n"
+    f"🌧 Вероятность осадков: {rain_text}"
+)
     )
 
 def main():
